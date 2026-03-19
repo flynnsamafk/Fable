@@ -302,14 +302,9 @@ const ServicesSection = ({ onSelectCategory }: { onSelectCategory: (cat: Categor
             viewport={{ once: true }}
             transition={{ delay: idx * 0.1, duration: 1.2 }}
             onClick={() => onSelectCategory(cat)}
-            className="group relative flex-1 cursor-pointer overflow-hidden h-full border-r border-black/5 last:border-r-0 min-h-[300px] bg-neutral-50"
+            className="group relative flex-1 cursor-pointer overflow-hidden h-full border-r border-black/5 last:border-r-0 min-h-[300px]"
           >
-            <motion.div
-              initial={{ y: "100%" }}
-              whileHover={{ y: 0 }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute inset-0 z-0"
-            >
+            <div className="absolute inset-0 z-0">
               <img
                 src={cat.image}
                 alt={cat.name}
@@ -317,13 +312,13 @@ const ServicesSection = ({ onSelectCategory }: { onSelectCategory: (cat: Categor
                 referrerPolicy="no-referrer"
               />
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/10 transition-colors duration-700" />
-            </motion.div>
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-700" />
+            </div>
             
             {/* Vertical Text */}
             <div className="absolute top-1/2 left-4 md:left-8 -translate-y-1/2 overflow-visible z-10">
               <h3 
-                className="font-display font-extrabold text-7xl md:text-9xl tracking-[0.05em] text-neutral-800 group-hover:text-white/90 transition-colors duration-500 origin-center -rotate-90 whitespace-nowrap drop-shadow-2xl"
+                className="font-display font-extrabold text-7xl md:text-9xl tracking-[0.05em] text-white/90 origin-center -rotate-90 whitespace-nowrap drop-shadow-2xl"
               >
                 {cat.name}
               </h3>

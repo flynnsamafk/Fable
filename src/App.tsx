@@ -13,6 +13,8 @@ import beforeImage from './assets/before.png';
 import afterImage from './assets/after.png';
 import waxingImage from './assets/waxing.png';
 import storyImage from './assets/story.png';
+import { AwardSection } from './components/AwardSection';
+
 
 // --- Types ---
 
@@ -311,17 +313,6 @@ const ServicesSection = ({ onSelectCategory }: { onSelectCategory: (cat: Categor
               >
                 {cat.name}
               </h3>
-            </div>
-
-            {/* Bottom Button */}
-            <div className="absolute bottom-12 left-1/2 -translate-x-1/2 md:bottom-16 flex justify-center w-full px-6">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white text-black px-12 py-5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase shadow-[0_20px_50px_rgba(0,0,0,0.2)] transition-all duration-300 w-full md:w-auto text-center"
-              >
-                shop {cat.name}
-              </motion.div>
             </div>
           </motion.div>
         ))}
@@ -861,6 +852,8 @@ export default function App() {
                 />
               )}
             </AnimatePresence>
+
+            <AwardSection />
 
             <footer className="py-24 bg-neutral-900 text-white px-6">
               <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16">

@@ -274,17 +274,6 @@ const Pitch = () => {
           </motion.h2>
         </div>
 
-        <div className="overflow-hidden mb-12">
-          <motion.p variants={item} className="text-sm font-medium tracking-widest uppercase opacity-60 max-w-2xl mx-auto leading-relaxed">
-            We're a certified Loreal Paris Professional
-          </motion.p>
-        </div>
-
-        <motion.div variants={item} className="flex flex-col items-center gap-4">
-          <button className="text-xs font-bold tracking-widest uppercase border-b border-black/20 pb-1 hover:border-black transition-all">
-            Read More
-          </button>
-        </motion.div>
       </motion.div>
     </section>
   );
